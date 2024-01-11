@@ -1,8 +1,7 @@
 import React from "react";
-import { data } from "../../data/data";
 import { HolidayPod } from "../HolidayPod/holidayPod";
 
-export const Results = () => {
+export const Results = ({ data }) => {
   return (
     <ul className="lg:col-span-3">
       {data.map((holiday) => (
