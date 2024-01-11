@@ -2,29 +2,31 @@ import React from "react";
 
 export const Travellers = ({ adults, children, infants }) => {
   const formatAdultsText = (adults) => {
-    return adults > 1 ? "Adults" : "Adult";
+    return adults > 1 ? " Adults" : " Adult";
   };
 
   const formatChildrenText = (children) => {
-    return children > 1 ? "children" : "child";
+    return children > 1 ? " children" : " child";
   };
 
   const formatInfantsText = (infants) => {
-    return infants > 1 ? "infants" : "infant";
+    return infants > 1 ? " infants" : " infant";
   };
 
   return (
     <p>
-      {adults} {formatAdultsText(adults)}
+      <span className="font-bold">{adults}</span> {formatAdultsText(adults)}
       {children && (
         <span>
-          , {children} {formatChildrenText(children)}
+          , <span className="font-bold">{children}</span>
+          {formatChildrenText(children)}
         </span>
       )}
       {infants && (
         <span>
           {" "}
-          & {infants} {formatInfantsText(infants)}
+          & <span className="font-bold">{infants}</span>
+          {formatInfantsText(infants)}
         </span>
       )}
     </p>

@@ -26,13 +26,15 @@ export const HolidayPod = ({
             <h2 className="text-lg font-bold text-blue-900">{name}</h2>
             <p className="text-sm text-gray-400">{location}</p>
           </div>
-
           <StarRating rating={rating} />
-          <>
+          <div className="text-sm pb-4">
             <Travellers {...travellers} />
             <TripDates {...tripDates} />
-            <p>departing from {departureAirport}</p>
-          </>
+            <p>
+              departing from{" "}
+              <span className="font-bold">{departureAirport}</span>
+            </p>
+          </div>
           {/* TODO: build price button */}
           {price}
         </div>
