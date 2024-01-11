@@ -2,6 +2,7 @@ import React from "react";
 import { MdOutlineSortByAlpha } from "react-icons/md";
 import { RiMoneyPoundCircleFill } from "react-icons/ri";
 import { FaStar } from "react-icons/fa6";
+import { SortButton } from "../SortButton/sortButton";
 
 export const Sidebar = ({ onSort, selectedSort }) => {
   const handleSort = (type) => {
@@ -13,37 +14,33 @@ export const Sidebar = ({ onSort, selectedSort }) => {
       label: "alphabetically",
       labelPrefix: "sort ",
       value: "alphabetically",
-      checked: false,
+      checked: selectedSort === "alphabetically",
       icon: <MdOutlineSortByAlpha />,
     },
     {
       label: "price",
       labelPrefix: "sort by ",
       value: "price",
-      checked: true,
+      checked: selectedSort === "price",
       icon: <RiMoneyPoundCircleFill />,
     },
     {
       label: "star rating",
       labelPrefix: "sort by ",
       value: "rating",
-      checked: false,
+      checked: selectedSort === "rating",
       icon: <FaStar />,
     },
   ];
 
   return (
     <aside>
-      {sortOptions.map(({ label, labelPrefix, value, checked, icon }) => (
-        <label key={value}>
-          <input
-            type="radio"
-            value={value}
-            checked={selectedSort === value}
-            onChange={() => handleSort(value)}
-          />
-          {labelPrefix} {label} {icon}
-        </label>
+      {sortOptions.map((sortOption) => (
+        <SortButton
+          key={sortOption.value}
+          {...sortOption}
+          onChange={() => handleSort(sortOption.value)}
+        />
       ))}
     </aside>
   );
