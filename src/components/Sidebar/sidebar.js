@@ -9,32 +9,34 @@ export const Sidebar = ({ onSort, selectedSort }) => {
     onSort(type);
   };
 
+  const style = { fontSize: "1.5em" };
+
   const sortOptions = [
     {
       label: "alphabetically",
       labelPrefix: "sort ",
       value: "alphabetically",
       checked: selectedSort === "alphabetically",
-      icon: <MdOutlineSortByAlpha />,
+      icon: <MdOutlineSortByAlpha style={style} />,
     },
     {
       label: "price",
       labelPrefix: "sort by ",
       value: "price",
       checked: selectedSort === "price",
-      icon: <RiMoneyPoundCircleFill />,
+      icon: <RiMoneyPoundCircleFill style={style} />,
     },
     {
       label: "star rating",
       labelPrefix: "sort by ",
       value: "rating",
       checked: selectedSort === "rating",
-      icon: <FaStar />,
+      icon: <FaStar style={style} />,
     },
   ];
 
   return (
-    <aside>
+    <aside className="mb-8 md:mb-0">
       {sortOptions.map((sortOption) => (
         <SortButton
           key={sortOption.value}
