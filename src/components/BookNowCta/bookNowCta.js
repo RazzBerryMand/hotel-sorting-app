@@ -5,11 +5,12 @@ export const BookNowCta = ({ price }) => {
     alert("Great choice!");
   };
 
+  const formatter = new Intl.NumberFormat("en-GB", {
+    style: "currency",
+    currency: "GBP",
+  });
+
   const formatPrice = (price) => {
-    const formatter = new Intl.NumberFormat("en-GB", {
-      style: "currency",
-      currency: "GBP",
-    });
     return formatter.format(price);
   };
 

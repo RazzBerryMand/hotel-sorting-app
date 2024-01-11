@@ -35,6 +35,10 @@ export const Sidebar = ({ onSort, selectedSort }) => {
     },
   ];
 
+  if (!sortOptions || sortOptions.length === 0) {
+    return <p>No sorting options available.</p>;
+  }
+
   return (
     <aside className="mb-8 md:mb-0">
       {sortOptions.map((sortOption) => (

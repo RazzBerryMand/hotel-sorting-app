@@ -3,8 +3,7 @@ import { Travellers } from "../Travellers/travellers";
 import { TripDates } from "../TripDates/tripDates";
 import { StarRating } from "../StarRating/starRating";
 import { BookNowCta } from "../BookNowCta/bookNowCta";
-import { FaChevronDown } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 
 export const HolidayPod = ({
   name,
@@ -19,36 +18,24 @@ export const HolidayPod = ({
 }) => {
   const [showInfo, setShowInfo] = useState(false);
 
-  const handleShowInfo = () => {
-    setShowInfo(!showInfo);
-  };
-
   return (
     <article className="bg-white text-slate-600">
       <div className="md:flex">
         <div className="overflow-hidden md:w-4/6 relative">
           <img className="object-cover h-full w-full" src={image} alt={name} />
           <button
-            onClick={handleShowInfo}
+            onClick={() => setShowInfo((prevShowInfo) => !prevShowInfo)}
             className="cursor-pointer absolute bottom-0 z-10 bg-white py-2 px-4 text-blue-800 flex"
           >
-            {showInfo ? (
-              <div className="flex items-center">
-                <span className="font-bold mr-1">Read less</span>
-                about this hotel
-                <span className="ml-3">
-                  <FaChevronDown />
-                </span>
-              </div>
-            ) : (
-              <div className="flex items-center">
-                <span className="font-bold mr-1">Read more</span>
-                about this hotel
-                <span className="ml-3">
-                  <FaChevronRight />
-                </span>
-              </div>
-            )}
+            <div className="flex items-center w-60">
+              <span className={`font-bold mr-1`}>
+                Read {showInfo ? "less" : "more"}
+              </span>
+              about this hotel
+              <span className="ml-4">
+                {showInfo ? <FaChevronDown /> : <FaChevronRight />}
+              </span>
+            </div>
           </button>
         </div>
         <div className="p-4 md:w-2/6">
@@ -72,7 +59,7 @@ export const HolidayPod = ({
       {showInfo && (
         <div className="p-4">
           <h3 className="text-blue-800 pb-4">
-            <strong>Overview</strong>
+            <span className="font-bold">Overview</span>
           </h3>
           <p>{overview}</p>
         </div>
