@@ -2,6 +2,7 @@ import React from "react";
 import { Travellers } from "../Travellers/travellers";
 import { TripDates } from "../TripDates/tripDates";
 import { StarRating } from "../StarRating/starRating";
+import { BookNowCta } from "../BookNowCta/bookNowCta";
 
 export const HolidayPod = ({
   name,
@@ -35,8 +36,7 @@ export const HolidayPod = ({
               <span className="font-bold">{departureAirport}</span>
             </p>
           </div>
-          {/* TODO: build price button */}
-          {price}
+          <BookNowCta price={price} />
         </div>
       </div>
       {/* TODO: finish overview panel show/hide functionality */}
