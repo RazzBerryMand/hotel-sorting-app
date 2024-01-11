@@ -1,6 +1,7 @@
 import React from "react";
 import { Travellers } from "../Travellers/travellers";
 import { TripDates } from "../TripDates/tripDates";
+import { StarRating } from "../StarRating/starRating";
 
 export const HolidayPod = ({
   name,
@@ -25,8 +26,8 @@ export const HolidayPod = ({
             <h2 className="text-lg font-bold text-blue-900">{name}</h2>
             <p className="text-sm text-gray-400">{location}</p>
           </div>
-          {/* TODO: build star rating component */}
-          {rating} stars
+
+          <StarRating rating={rating} />
           <>
             <Travellers {...travellers} />
             <TripDates {...tripDates} />
