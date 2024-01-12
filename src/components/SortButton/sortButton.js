@@ -8,17 +8,17 @@ export const SortButton = ({
   icon,
   onChange,
 }) => {
-  const labelClass = checked
+  const labelClassList = checked
     ? "bg-blue-900 text-white"
     : "bg-white text-blue-900";
 
-  const iconClass = checked ? "text-white" : "text-gray-400";
+  const iconClassList = checked ? "text-white" : "text-gray-400";
 
   return (
     <div className="flex items-center bg-white last:border-none border-b border-b-blue-900 group">
       <label
         htmlFor={value}
-        className={`cursor-pointer w-full p-4 text-sm font-medium flex hover:bg-blue-900 hover:text-white ${labelClass}`}
+        className={`cursor-pointer w-full p-4 text-sm font-medium flex hover:bg-blue-900 hover:text-white ${labelClassList}`}
       >
         <input
           id={value}
@@ -31,7 +31,7 @@ export const SortButton = ({
         />
         {labelPrefix}
         <span className="font-bold ml-1">{label}</span>
-        <span className={`ml-auto ${iconClass} group-hover:text-white`}>
+        <span className={`ml-auto ${iconClassList} group-hover:text-white`}>
           {icon}
         </span>
       </label>
