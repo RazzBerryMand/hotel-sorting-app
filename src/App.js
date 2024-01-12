@@ -27,7 +27,7 @@ function App() {
   }, [selectedSort]);
 
   return (
-    <div className="bg-gradient-image bg-cover bg-center">
+    <div className="bg-gradient-image bg-repeat bg-center">
       <div className="container w-5/6 md:w-full mx-auto pt-12 pb-48 md:grid md:grid-cols-3 md:gap-x-8 lg:gap-x-16">
         <Sidebar onSort={handleSort} selectedSort={selectedSort} />
         <Results data={sortedData} />
