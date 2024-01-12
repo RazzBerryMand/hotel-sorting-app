@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Travellers } from "../Travellers/travellers";
+import { Guests } from "../Guests/guests";
 import { TripDates } from "../TripDates/tripDates";
 import { StarRating } from "../StarRating/starRating";
 import { BookNowCta } from "../BookNowCta/bookNowCta";
@@ -9,7 +9,7 @@ export const HolidayPod = ({
   name,
   location,
   rating,
-  travellers,
+  guests,
   tripDates,
   departureAirport,
   price,
@@ -45,7 +45,7 @@ export const HolidayPod = ({
           </div>
           {rating && <StarRating rating={rating} />}
           <div className="text-sm pb-4">
-            <Travellers {...travellers} />
+            <Guests {...guests} />
             <TripDates {...tripDates} />
             <p>
               departing from{" "}

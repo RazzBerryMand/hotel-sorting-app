@@ -8,7 +8,7 @@ export const data = [
     name: "Iberostar Grand Salome",
     location: "Costa Adeje, Tenerife",
     rating: 5,
-    travellers: {
+    guests: {
       adults: 2,
       children: 2,
       infants: 1,
@@ -28,7 +28,7 @@ export const data = [
     name: "Aguamarina Golf Hotel",
     location: "Costa Adeje, Tenerife",
     rating: 4,
-    travellers: {
+    guests: {
       adults: 2,
       children: 1,
     },
@@ -47,7 +47,7 @@ export const data = [
     name: "Las Piramides Resort",
     location: "Costa Adeje, Tenerife",
     rating: 3,
-    travellers: {
+    guests: {
       adults: 2,
       children: 2,
     },

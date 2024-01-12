@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Travellers = ({ adults, children, infants }) => {
+export const Guests = ({ adults, children, infants }) => {
   const formatAdultsText = (adults) => {
     return adults > 1 ? " Adults" : " Adult";
   };
@@ -15,7 +15,8 @@ export const Travellers = ({ adults, children, infants }) => {
 
   return (
     <p>
-      <span className="font-bold">{adults}</span> {formatAdultsText(adults)}
+      <span className="font-bold">{adults}</span>
+      {formatAdultsText(adults)}
       {children && (
         <span>
           , <span className="font-bold">{children}</span>
