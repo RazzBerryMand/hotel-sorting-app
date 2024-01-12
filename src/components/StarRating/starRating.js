@@ -6,7 +6,7 @@ export const StarRating = ({ rating }) => {
 
   for (let i = 0; i < Math.min(rating, 5); i++) {
     stars.push(
-      <span className="mr-1" key={i}>
+      <span data-testid="star" className="mr-1" key={i}>
         <FaStar />
       </span>
     );
