@@ -27,11 +27,11 @@ export const HolidayPod = ({
             onClick={() => setShowInfo((prevShowInfo) => !prevShowInfo)}
             className="cursor-pointer absolute bottom-0 z-10 bg-white py-2 px-4 text-blue-800 flex"
           >
-            <div className="flex items-center w-60">
+            <div className="flex items-center w-32 md:w-60">
               <span className={`font-bold mr-1`}>
                 Read {showInfo ? "less" : "more"}
               </span>
-              about this hotel
+              <span className="hidden md:block"> about this hotel</span>
               <span className="ml-4">
                 {showInfo ? <FaChevronDown /> : <FaChevronRight />}
               </span>
