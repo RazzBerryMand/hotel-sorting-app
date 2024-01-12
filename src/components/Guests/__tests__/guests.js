@@ -30,6 +30,7 @@ describe("Guests", () => {
         }}
       />
     );
+
     const guests = screen.getByText("Adult", {
       exact: false,
     });
@@ -44,6 +45,7 @@ describe("Guests", () => {
         }}
       />
     );
+
     const guests = screen.getByText("Adult", {
       exact: false,
     });
@@ -59,6 +61,7 @@ describe("Guests", () => {
         }}
       />
     );
+
     const guests = screen.getByText("Adult", {
       exact: false,
     });
@@ -74,6 +77,7 @@ describe("Guests", () => {
         }}
       />
     );
+
     const guests = screen.getByText("Adult", {
       exact: false,
     });
