@@ -25,7 +25,7 @@ export const HolidayPod = ({
           <img className="object-cover h-full w-full" src={image} alt={name} />
           <button
             onClick={() => setShowInfo((prevShowInfo) => !prevShowInfo)}
-            className="cursor-pointer absolute bottom-0 z-10 bg-white py-2 px-4 text-blue-800 flex"
+            className="cursor-pointer absolute bottom-0 z-10 bg-white py-2 px-4 text-blue-900 flex"
           >
             <div className="flex items-center w-32 md:w-60">
               <span className={`font-bold mr-1`}>
@@ -58,7 +58,7 @@ export const HolidayPod = ({
 
       {showInfo && (
         <div className="p-4">
-          <h3 className="text-blue-800 pb-4">
+          <h3 className="text-blue-900 pb-4">
             <span className="font-bold">Overview</span>
           </h3>
           <p>{overview}</p>
